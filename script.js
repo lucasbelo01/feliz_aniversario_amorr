@@ -5,20 +5,6 @@ document.getElementById('revealButton').addEventListener('click', function() {
 const playMusicBtn = document.getElementById('play-music-btn');
 const audioPlayer = document.getElementById('audio-player');
 let isPlaying = false;
-
-// Adiciona o evento de clique para o botão de música
-playMusicBtn.addEventListener('click', () => {
-    if (isPlaying) {
-        audioPlayer.pause();
-        playMusicBtn.textContent = 'Tocar Música';
-    } else {
-        audioPlayer.play();
-        playMusicBtn.textContent = 'Pausar Música';
-    }
-    isPlaying = !isPlaying;
-});
-
-// Código do carrossel (sem mudanças, pois já está funcionando)
 const carouselImages = document.querySelector('.carousel-images');
 const images = document.querySelectorAll('.carousel-images img');
 const prevBtn = document.querySelector('.prev-btn');
@@ -81,3 +67,4 @@ window.addEventListener('load', () => {
     startAutoSlide();
     updateCarousel();
 });
+
