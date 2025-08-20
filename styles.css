@@ -1,0 +1,221 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lora:wght@400;700&display=swap');
+
+/* Adicionando a animação de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    background-image: url('images/fundo_rosas_e_morangos.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #fcebeb;
+    color: #4a1942;
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+}
+
+/* Estilo do cabeçalho */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #e68a9c;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do conteúdo principal */
+main {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 2px solid #f0b9c3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+    opacity: 0;
+}
+
+.sub-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #b85061;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.intro-section, .message-section {
+    text-align: center;
+    margin-bottom: 2.5em;
+    line-height: 1.7;
+}
+
+.intro-text, .main-message, .final-message {
+    font-size: 1.15em;
+    margin-bottom: 1.2em;
+}
+
+.final-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #b85061;
+}
+
+/* Estilo do Carrossel de Fotos */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    background-color: #fdf5f5;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.carousel-images img:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #b85061;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 1.5em;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: #b85061;
+}
+
+/* Estilo do botão de música */
+.music-section {
+    text-align: center;
+    margin: 2em 0;
+}
+
+#play-music-btn {
+    background-color: #e68a9c;
+    color: #f5e9e9;
+    border: 1px solid #e68a9c;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#play-music-btn:hover {
+    background-color: #d16686;
+    transform: translateY(-1px);
+}
+
+/* Estilo do botão de revelação */
+.button-container {
+    text-align: center;
+    margin-top: 3em;
+}
+
+#revealButton {
+    background-color: #b85061;
+    color: #f5e9e9;
+    border: 1px solid #b85061;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#revealButton:hover {
+    background-color: #d16686;
+    transform: translateY(-1px);
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: auto;
+    color: #5a5a5a;
+    font-size: 0.9em;
+}
